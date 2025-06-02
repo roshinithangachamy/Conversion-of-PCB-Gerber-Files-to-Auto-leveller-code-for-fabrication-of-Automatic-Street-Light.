@@ -1,6 +1,4 @@
-# Conversion-of-PCB-Gerber-Files-to-Auto-leveller-code-for-fabrication-of-Automatic-Street-Light.
 ## Exp 9: Conversion of PCB Gerber Files to CNC G-Code and G Code into Auto leveller code for Precision Engraving, Drilling, and Cutting of Automatic Street Light Control Circuits.
-
 ## AIM:
 To convert PCB Gerber files of an automatic street light control circuit into CNC-compatible G-Code, and G-Code into Auto leveller Code to ensure precise engraving, drilling, and cutting operations during PCB manufacturing using a CNC machine.
 ## EQUIPMENT REQUIRED:
@@ -33,7 +31,7 @@ To convert PCB Gerber files of an automatic street light control circuit into CN
 9.Autolevelling should be done for only engraving file.<br>
 ## THEORY:
 In the process of PCB prototyping using CNC machines, converting Gerber files into G-Code is a crucial step. Gerber files, which are generated from PCB design software such as Eagle, KiCad, or Altium, contain all the essential data related to copper traces, drill holes, and board outlines. These files are loaded into CopperCAM, a specialized software tool used to convert Gerber data into machine-readable G-Code. G-Code is the standard language for CNC machines, containing instructions for tool paths, feed rates, and operations like drilling, engraving, and cutting. CopperCAM allows users to define tool parameters and optimize machining paths for precise and efficient milling. It separates different PCB layers (top, bottom, drill, outline) and converts each into a suitable toolpath, which is then saved as G-Code.
-Once the G-Code is generated, it is essential to ensure that the CNC engraving bit maintains consistent depth across the entire surface of the copper-clad board, as even minor surface irregularities can affect trace quality. To overcome this, AutoLeveller software is used. This tool takes the original G-Code and enhances it by adding auto-leveling commands, which probe various points on the PCB surface to measure height differences. Based on these measurements, it adjusts the Z-axis movements dynamically during machining, ensuring that the engraving depth remains constant. This results in high precision and better-quality PCB fabrication. By integrating CopperCAM and AutoLeveller in the workflow, the process from Gerber file to fully auto-leveled CNC-ready code becomes streamlined, accurate, and suitable for creating reliable circuit boards such as the automatic street light control system.
+Once the G-Code is generated, it is essential to ensure that the CNC engraving bit maintains consistent depth across the entire surface of the copper-clad board, as even minor surface irregularities can affect trace quality. To overcome this, AutoLeveller software is used.
 ## EXPECTED OUTPUT:
 ### Copper CAM
 ### Engraving G Code
@@ -980,25 +978,6 @@ G01 X52.581 Y31.515
 G01 X52.388 Y31.412
 G01 X52.218 Y31.272
 G01 X52.133 Y31.169
-G00 Z2
-G00 X52.877 Y36.667
-G00 Z0
-G01 F60 Z-0.06
-G01 F600 X47.147 Y42.397
-G01 X47.043 Y42.483
-G01 X46.924 Y42.546
-G01 X46.794 Y42.585
-G01 X46.66 Y42.599
-G01 X39.198
-G01 X38.13 Y43.667
-G01 X34.649 Y47.148
-G01 Y50.153
-G01 X34.905 Y50.409
-G01 Y51.191
-G01 X34.351 Y51.745
-G01 X33.569
-G01 X33.015 Y51.191
-G01 Y50.409
 G01 X33.271 Y50.153
 G01 Y46.863
 G01 X33.285 Y46.729
@@ -1107,18 +1086,6 @@ G01 X52.218 Y46.512
 G01 X52.388 Y46.652
 G01 X52.581 Y46.755
 G01 X52.677 Y46.784
-G01 Y47.203
-G01 X52.52 Y47.163
-G01 X52.336 Y47.087
-G01 X52.163 Y46.988
-G01 X52.005 Y46.866
-G01 X51.864 Y46.725
-G01 X51.742 Y46.567
-G01 X51.643 Y46.394
-G01 X51.566 Y46.21
-G01 X51.532 Y46.08
-G01 X51.951 Y46.07
-G01 X51.938 Y46.028
 G00 Z2
 G00 X53.36 Y46.779
 G00 Z0
@@ -1152,20 +1119,6 @@ G01 X54.156 Y44.715
 G01 X54.015 Y44.574
 G01 X53.857 Y44.452
 G01 X53.684 Y44.353
-G01 X53.5 Y44.276
-G01 X53.343 Y44.234
-G01 X53.307 Y44.225
-G01 X53.282 Y44.221
-G01 X53.343 Y44.168
-G01 Y44.234
-G01 Y44.656
-G01 X53.439 Y44.685
-G01 X53.632 Y44.788
-G01 X53.802 Y44.928
-G01 X53.942 Y45.098
-G01 X54.045 Y45.291
-G01 X54.069 Y45.37
-G00 Z2
 G00 X52.617 Y50.111
 G00 Z0
 G01 F60 Z-0.06
@@ -1180,15 +1133,6 @@ G01 X58.415 Y35.951
 G01 Y35.169
 G01 X58.671 Y34.913
 G01 Y25.94
-G01 X58.685 Y25.806
-G01 X58.724 Y25.676
-G01 X58.787 Y25.557
-G01 X58.873 Y25.453
-G01 X61.413 Y22.913
-G01 X61.517 Y22.827
-G01 X61.636 Y22.764
-G01 X61.766 Y22.725
-G01 X61.9 Y22.711
 G01 X62.501
 G01 X62.636 Y22.6
 G01 X62.802 Y22.512
@@ -1216,24 +1160,6 @@ G01 X55.268 Y12.545
 G01 X55.329 Y12.745
 G01 X55.35 Y12.954
 G01 Y14.986
-G01 X55.329 Y15.195
-G01 X55.268 Y15.395
-G01 X55.169 Y15.58
-G01 X55.036 Y15.742
-G01 X54.874 Y15.875
-G01 X54.689 Y15.974
-G01 X54.489 Y16.035
-G01 X54.28 Y16.056
-G01 X54.071 Y16.035
-G01 X53.871 Y15.974
-G01 X53.686 Y15.875
-G01 X53.524 Y15.742
-G01 X53.505 Y15.719
-G01 X52.227 Y16.997
-G01 X52.123 Y17.083
-G01 X52.004 Y17.146
-G01 X51.874 Y17.185
-G01 X51.74 Y17.199
 G01 X37.77
 G01 X37.636 Y17.185
 G01 X37.506 Y17.146
@@ -1328,31 +1254,6 @@ G01 X53.01 Y51.489
 G01 X52.617
 G01 X52.532 Y51.592
 G01 X52.362 Y51.732
-G01 X52.169 Y51.835
-G01 X51.959 Y51.899
-G01 X51.74 Y51.92
-G01 X51.521 Y51.899
-G01 X51.311 Y51.835
-G01 X51.118 Y51.732
-G01 X50.948 Y51.592
-G01 X50.808 Y51.422
-G01 X50.705 Y51.229
-G01 X50.641 Y51.019
-G01 X50.62 Y50.8
-G01 X50.641 Y50.581
-G01 X50.705 Y50.371
-G01 X50.808 Y50.178
-G01 X50.948 Y50.008
-G01 X51.118 Y49.868
-G01 X51.311 Y49.765
-G01 X51.521 Y49.701
-G01 X51.74 Y49.68
-G01 X51.959 Y49.701
-G01 X52.169 Y49.765
-G01 X52.362 Y49.868
-G01 X52.532 Y50.008
-G01 X52.617 Y50.111
-G00 Z2
 G00 X46.454 Y46.053
 G00 Z0
 G01 F60 Z-0.06
@@ -2159,7 +2060,6 @@ G00 Z2
 M05
 M02
 %
-
 ```
 ### Drill G Code
 ```
@@ -2325,7 +2225,6 @@ G00 Z2
 M05
 M02
 %
-
 ```
 ### Cut G Code
 ```
@@ -2349,10 +2248,8 @@ G00 Z2
 M05
 M02
 %
-
 ```
 ## Auto leveller
-
 ### Engraving G Code
 ```
 M6Tx
